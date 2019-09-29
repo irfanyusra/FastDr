@@ -9,7 +9,12 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+
             geocodeLatLng(geocoder, pos.lat, pos.lng);
+            // document.getElementById('calculatedData').style.display = "initial";
+            document.getElementById('calculatedData').style.visibility = "visible";
+
+            calcRoute();
         });
     } 
 }
@@ -34,3 +39,20 @@ function geocodeLatLng(geocoder,lati,long) {
           }
         });
     }
+function calcRoute() {
+    // var start = document.getElementById('start').value;
+    // var end = d ocument.getElementById('end').value;
+    var request = {
+        origin: address,
+        destination: 'Trillium Health Partners - Credit Valley Hospital',
+        travelMode: 'DRIVING'
+    };
+    document.getElementById('end').innerHTML = request.destination;
+  
+
+    directionsService.route(request, function (response, status) {
+        if (status == 'OK') {
+            directionsRenderer.setDirections(response);
+        }
+    });
+}

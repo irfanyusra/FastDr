@@ -11032,3 +11032,7 @@ body.sidebar-toggled footer.sticky-footer {
   background: url('contrasticon.png');
   cursor: pointer;
 }
+
+#filter:hover{
+color:red;
+} 

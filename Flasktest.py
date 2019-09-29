@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_bootstrap import Bootstrap
+import Data
 
 app = Flask(__name__)
 
@@ -8,11 +9,12 @@ dict ={
     "model": "Mustang",
     "year": 1964}
 
+Data.call_to_data()
 
-testdata = ["Hospital 1", "Hospital 2", "Hospital 3"]
-testdata2 = [4.3, 5.2, 6.3]
-testdata3 = [7.1, 8.7, 9.5]
-#testdata = {["Hospital 1", "Hospital 2", "Hospital 3"], [4.3, 5.2, 6.3], [7.1, 8.7, 9.5]}
+names = Data.name()
+travel = Data.travel()
+wait = Data.wait()
+total = Data.total()
 
 @app.route('/')
 def index():
@@ -21,13 +23,13 @@ def index():
 def about():
     #if request.method == "GET":
         #return render_template("findAHospital.html", testdata=testdata)
-    return render_template('findAHospital.html', testdata=testdata, testdata2=testdata2, testdata3=testdata3)
+    return render_template('findAHospital.html', names=names, travel=travel, wait=wait, total=total)
 
 
 @app.route('/text', methods=['GET', 'POST'])
 def text(comments=[]):
     #if request.method == "GET":
-    return render_template("index.html", testdata=testdata, testdata2=testdata2, testdata3=testdata3)
+    return render_template("index.html", names=names, travel=travel, wait=wait, total=total)
     #return redirect(url_for('text'))
 
 

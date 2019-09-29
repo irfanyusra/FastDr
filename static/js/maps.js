@@ -9,7 +9,6 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-
             geocodeLatLng(geocoder, pos.lat, pos.lng);
             // document.getElementById('calculatedData').style.display = "initial";
             document.getElementById('calculatedData').style.visibility = "visible";
@@ -29,8 +28,10 @@ function geocodeLatLng(geocoder,lati,long) {
                 position: latlng,
               });
                 address = results[0].formatted_address;
+                windows.alert(address);
                 var field = document.getElementById('formLocation');
-                field.value = address;
+                field.value =address;
+                
             } else {
               window.alert('No results found');
             }

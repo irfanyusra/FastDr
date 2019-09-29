@@ -11,7 +11,7 @@
   <component name="ProjectId" id="1RTKD4GuEJ9m7gGZ4g3hdmeXPAJ" />
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML&#10;Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/index.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Data.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -32,7 +32,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Flasktest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="CSV_reader" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AmpHacks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
